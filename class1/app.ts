@@ -35,4 +35,12 @@ console.log(blee)
 var convertingBolIntoString : string = blee.toString()
 console.log(convertingBolIntoString)
 
+///null and undefine 
 
+var varible1 : null | string = null
+console.log(varible1)
+varible1 = "Alam"
+console.log(varible1)
+
+var undefin1Varible : undefined = undefined
+console.log(undefin1Varible)
