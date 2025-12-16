@@ -11,3 +11,12 @@ console.log(arrNumber)
 
 let arrString: string[] = ['Tofail' , 'Inayat' , 'Ehtisham']
 console.log(arrString)
+
+//Turple in typescript
+
+let userData : [number , string , boolean] = [1 , "Hasnain" , true]
+userData.push(800)
+console.log(userData)
+
+let userData2: readonly[number , string] = [32 , 'JavaScript Developer']
+console.log(userData2)
