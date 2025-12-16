@@ -20,3 +20,26 @@ console.log(userData)
 
 let userData2: readonly[number , string] = [32 , 'JavaScript Developer']
 console.log(userData2)
+
+
+///abjects in typescript
+let userDataObj : {
+    name: string ,
+    email: string , 
+    phone: number , 
+    login: true
+}={
+    name: 'Viki',
+    email: "viki@gmail.com",
+    phone: 323942,
+    login: true
+}
+console.log(userDataObj)
+
+let addingDyamincObjectElement : {
+    [key: string] : string | number | undefined | boolean
+} = {
+    name: "david",
+    phone: 4340349
+}
+addingDyamincObjectElement.city = 'UK'

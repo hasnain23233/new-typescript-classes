@@ -14,3 +14,16 @@ userData.push(800);
 console.log(userData);
 var userData2 = [32, 'JavaScript Developer'];
 console.log(userData2);
+///abjects in typescript
+var userDataObj = {
+    name: 'Viki',
+    email: "viki@gmail.com",
+    phone: 323942,
+    login: true
+};
+console.log(userDataObj);
+var addingDyamincObjectElement = {
+    name: "david",
+    phone: 4340349
+};
+addingDyamincObjectElement.city = 'UK';
