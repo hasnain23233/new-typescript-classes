@@ -8,6 +8,7 @@ var arrNumber = [12, 32, 53];
 console.log(arrNumber);
 var arrString = ['Tofail', 'Inayat', 'Ehtisham'];
 console.log(arrString);
+console.log(arrStr)
 //Turple in typescript
 var userData = [1, "Hasnain", true];
 userData.push(800);

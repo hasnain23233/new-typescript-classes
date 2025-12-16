@@ -28,11 +28,16 @@ let userDataObj : {
     email: string , 
     phone: number , 
     login: true
+    nustingObject : {city:string , country : string}
 }={
     name: 'Viki',
     email: "viki@gmail.com",
     phone: 323942,
-    login: true
+    login: true,
+    nustingObject : {
+        city: 'islamabad',
+        country : 'pakistan'
+    }
 }
 console.log(userDataObj)
 
