@@ -44,3 +44,28 @@ console.log(varible1)
 
 var undefin1Varible : undefined = undefined
 console.log(undefin1Varible)
+
+
+
+///bigint datatype in typescript
+// var bigIntVar : bigint  = 903432093492n
+// var bigIntVar2  = 1342353243n
+var bigIntVar3 = 3
+
+// console.log(bigIntVar + bigIntVar2)
+
+//symbol data type
+var SymboData =  Symbol()
+var SymboData2 = Symbol()
+console.log(SymboData == SymboData2)
+
+console.log(SymboData)
+console.log(SymboData2)
+
+const DynamicID = Symbol('id')
+
+const dataObj = {
+    [DynamicID] : 1,
+    name: "aslam"
+}
+console.log(dataObj[DynamicID])
