@@ -4,6 +4,5 @@ function getInfo(){
 
     const name : string = firstInput.value
     const message: string = secondInput.value
-
     console.log(name , '  ' , message)
 }
