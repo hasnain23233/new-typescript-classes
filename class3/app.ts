@@ -48,3 +48,21 @@ let addingDyamincObjectElement : {
     phone: 4340349
 }
 addingDyamincObjectElement.city = 'UK'
+
+
+//working on any and unknow 
+
+let anyDatatype: any = 'adfa'
+anyDatatype = 390
+anyDatatype = []
+anyDatatype = 548503
+console.log(anyDatatype)
+
+
+let unknowDataType: unknown = 4380
+unknowDataType = 'u3495'
+
+if(typeof unknowDataType ==='string'){
+    console.log('check the datatype before using the unknow datatype')
+}
+console.log(unknowDataType)

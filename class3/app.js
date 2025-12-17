@@ -8,7 +8,6 @@ var arrNumber = [12, 32, 53];
 console.log(arrNumber);
 var arrString = ['Tofail', 'Inayat', 'Ehtisham'];
 console.log(arrString);
-console.log(arrStr)
 //Turple in typescript
 var userData = [1, "Hasnain", true];
 userData.push(800);
@@ -20,7 +19,11 @@ var userDataObj = {
     name: 'Viki',
     email: "viki@gmail.com",
     phone: 323942,
-    login: true
+    login: true,
+    nustingObject: {
+        city: 'islamabad',
+        country: 'pakistan'
+    }
 };
 console.log(userDataObj);
 var addingDyamincObjectElement = {
@@ -28,3 +31,15 @@ var addingDyamincObjectElement = {
     phone: 4340349
 };
 addingDyamincObjectElement.city = 'UK';
+//working on any and unknow 
+var anyDatatype = 'adfa';
+anyDatatype = 390;
+anyDatatype = [];
+anyDatatype = 548503;
+console.log(anyDatatype);
+var unknowDataType = 4380;
+unknowDataType = 'u3495';
+if (typeof unknowDataType === 'string') {
+    console.log('check the datatype before using the unknow datatype');
+}
+console.log(unknowDataType);
