@@ -8,5 +8,11 @@ let user = personData.name;
 let userPhone = personData.phone;
 console.log(user, userPhone);
 console.log(personData.email);
+let studentData;
+studentData = {
+    name: "Alam",
+    phone: 934503
+};
+console.log(studentData);
 export {};
 //# sourceMappingURL=app.js.map

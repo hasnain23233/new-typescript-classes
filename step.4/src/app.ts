@@ -10,3 +10,14 @@ let userPhone: number = personData.phone
 console.log(user , userPhone)
 
 console.log(personData.email)
+
+let studentData :{
+    name : string,
+    phone : number
+}
+
+studentData ={
+    name: "Alam",
+    phone: 934503
+}
+console.log(studentData)
