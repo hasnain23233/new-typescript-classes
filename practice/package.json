@@ -1,0 +1,21 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^25.0.10"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "inquirer": "^13.2.1"
+  }
+}
