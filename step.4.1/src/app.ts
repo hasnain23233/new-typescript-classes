@@ -33,3 +33,19 @@ let ManagerData: Manager = {
     name : "Aslam",
 }
 console.log(ManagerData.name)
+
+interface activeChecker {
+    name : string ,
+    email: string,
+    phone: number,
+    CNIC ?: number
+}
+
+let emp1 : activeChecker = {
+    name: "Ahasmain",
+    email: "Aslam@gmail.com",
+    phone: 934234,
+    CNIC: 93423
+}
+
+console.log(emp1)
