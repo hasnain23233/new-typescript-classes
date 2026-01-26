@@ -21,7 +21,7 @@ user2 = user2
 
 console.log(user1)
 console.log(user2)
-
+ 
 interface personDetails {
     name : string , phone: number , exp : number , conform : boolean
 }
