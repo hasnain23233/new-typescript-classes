@@ -18,3 +18,16 @@ enum student {
 }
 let students : student = student.student2
 console.log(students)
+
+enum userResponse {
+    no =1,
+    yes = 0
+}
+
+let responseFunction = (userMessage: string , userResponse : userResponse) : void =>{
+    let user = userMessage  
+    let res = userResponse
+    console.log(user , res)
+}
+
+responseFunction("I am hasnain" ,  userResponse.yes)
