@@ -1,27 +1,28 @@
-console.log("This a typescript code and we practice the typescript in this file");
 import inquirer from "inquirer";
 import chalk from "chalk";
-import fs from 'fs';
+import fs from "fs";
+console.log("This is a TypeScript code and we practice enums in this file");
+var Roles;
+(function (Roles) {
+    Roles["user"] = "user";
+    Roles["admin"] = "admin";
+})(Roles || (Roles = {}));
+const questions = [
+    { name: "name", type: "input", message: "Enter your full name" },
+    { name: "email", type: "input", message: "Enter your full email" },
+    { name: "age", type: "number", message: "Enter your age" },
+    { name: "role", type: "list", message: "Select your role", choices: [Roles.admin, Roles.user] },
+];
 async function useDetails() {
-    let userData = await inquirer.prompt([
-        {
-            name: "name",
-            type: "input",
-            message: "Enter your full name"
-        },
-        {
-            name: "email",
-            type: "input",
-            message: "Enter your full email"
-        },
-        {
-            name: "age",
-            type: "input",
-            message: "Enter your age"
-        },
-    ]);
-    console.log(userData.name);
-    fs.writeFileSync(`${userData.name}.txt`, `The Details of the user ${chalk.blue(userData.name, ' ', userData.email, ' ', userData.age)}`);
+    const userData = await inquirer.prompt(questions);
+    const output = `
+Name: ${userData.name}
+Email: ${userData.email}
+Age: ${userData.age}
+Role: ${userData.role}
+    `;
+    fs.writeFileSync(`${userData.name}.txt`, output);
+    console.log(chalk.green("User data saved successfully ✅"));
 }
 useDetails();
 //# sourceMappingURL=app.js.map

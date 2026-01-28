@@ -1,30 +1,36 @@
-console.log("This a typescript code and we practice the typescript in this file")
-
 import inquirer from "inquirer"
 import chalk from "chalk"
-import fs from 'fs'
+import fs from "fs"
 
-type dataChecker = { name: string , email: string , age: number }
+console.log("This is a TypeScript code and we practice enums in this file")
+
+const enum Roles {
+    user = "user",
+    admin = "admin"
+}
+
+type DataChecker = { name: string, email: string, age: number, role: Roles }
+
+const questions = [
+    { name: "name", type: "input", message: "Enter your full name" },
+    { name: "email", type: "input", message: "Enter your full email" },
+    { name: "age", type: "number", message: "Enter your age" },
+    { name: "role", type: "list", message: "Select your role", choices: [Roles.admin, Roles.user] },
+]
+
 
 async function useDetails() {
-    let userData: dataChecker = await inquirer.prompt([
-        {
-            name: "name",
-            type: "input",
-            message: "Enter your full name"
-        },
-        {
-            name: "email",
-            type: "input",
-            message: "Enter your full email"
-        },
-        {
-            name: "age",
-            type: "input",
-            message: "Enter your age"
-        },
-    ])
-    console.log(userData.name)
-    fs.writeFileSync(`${userData.name}.txt`, `The Details of the user ${chalk.blue(userData.name , ' ' , userData.email , ' ' , userData.age)}`)
+    const userData = await inquirer.prompt<DataChecker>(questions)
+
+   
+    const output = `
+Name: ${userData.name}
+Email: ${userData.email}
+Age: ${userData.age}
+Role: ${userData.role}
+    `
+    fs.writeFileSync(`${userData.name}.txt`, output)
+    console.log(chalk.green("User data saved successfully ✅"))
 }
+
 useDetails()
