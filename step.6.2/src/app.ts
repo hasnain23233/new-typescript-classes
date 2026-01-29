@@ -27,19 +27,20 @@ let user2: userDetails = {
 
 let users: userDetails[] = []
 
-function fetchingWebsite(params: userDetails) {
-    const userExist = users.find(user => user.email === params.email)
+function fetchingWebsite(user: userDetails) {
+    const userExist = users.find(user => user.email === user.email)
     if (userExist) {
         return "Sorry, check your email or password"
     }
 
-    users.push(params)
+    users.push(user)
 
-    if (params.role === Roles.admin) {
-        return `The ${params.name} your access this email ${params.email} you are admin now you edit the website`
-    } else {
-        return `The ${params.name} your access this email ${params.email} Thanks for login happy coding`
-    }
+    if (user.role === Roles.admin) {
+        return `Welcome ${user.name}, you have admin access`
+    } 
+
+    return `Welcome ${user.name}, happy coding`
+
 }
 
 console.log(fetchingWebsite(user1))
