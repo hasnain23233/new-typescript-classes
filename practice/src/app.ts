@@ -27,7 +27,7 @@ async function collectUserDetails() {
     const userData = await inquirer.prompt<DataChecker>(questions)
 
     if (userData.age <= 0) {
-        console.log(chalk.red("Invalid age ❌"))
+        console.log(chalk.red("Invalid age"))
         return
     }
 
@@ -41,7 +41,7 @@ Role: ${userData.role}
     `
 
     fs.writeFileSync(`${fileName}.txt`, output)
-    console.log(chalk.green("User data saved successfully ✅"))
+    console.log(chalk.green("User data saved successfully"))
 }
 
 collectUserDetails()
