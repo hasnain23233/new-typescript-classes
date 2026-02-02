@@ -61,6 +61,19 @@ class reUseAbleData {
         return (`This use name is ${this.name} and the email is ${this.email}. He use this number ${this.phone}`)
     }
 }
+class data2 {
+    data: string
+    constructor (data = '12 ded'){
+        this.data = data
+    }
+    fetchingDAta(){
+        return this.data
+    }
+
+}
 let user1 = new reUseAbleData("Hasnain" , "hasnain@gmail.com" , 38493)
 console.log(user1.email)
 console.log(user1.useAllData())
+
+let user2 = user1 instanceof data2
+console.log(user2) 
