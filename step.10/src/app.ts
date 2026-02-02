@@ -18,6 +18,3 @@ const staf : accountDetails[] = [
     ["Khan" , "The was a engineer" , true]
 ]
 console.log(staf)
-
-type paymount = [accountDetails  , ...number[]]
-
