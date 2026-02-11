@@ -6,10 +6,6 @@ class Human {
     constructor(name: string){
         this.name = name
     }
-
-    naming (){
-        console.log(this.name + " Is best human in the world and he is a best web developer")
-    }
 }
 
 class Animal {
@@ -20,15 +16,12 @@ class Animal {
         this.name = name
         this.age = age
     }
-    eat (){
-        console.log(this.name + " is a animal is eating and the age of animal is " + this.age )
-    }
 }
 
-let human = new Human("Hasnain")
-human.naming()
+let human: Human
 
-let animal = new Animal("dog" , 38)
-animal.eat()
+let animal = new Animal("dog" , 49)
+
+human = animal
+console.log(human.name)
 console.log(animal.age)
-console.log(animal.name)
