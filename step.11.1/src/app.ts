@@ -1,4 +1,4 @@
-console.log("In this class we learn about the structul typing")
+console.log("In this class we learn about the structural typing")
 
 class Human {
     name: string
