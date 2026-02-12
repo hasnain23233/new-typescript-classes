@@ -1,4 +1,4 @@
-console.log("In this class we learn about structural typing in TypeScript");
+console.log("In this class we learn about confusion typing in TypeScript");
 
 // Human class
 class Human {
