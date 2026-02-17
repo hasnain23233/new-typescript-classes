@@ -16,5 +16,25 @@ let api = {
     email: "Data@gmail.com"
 };
 console.log(api);
+let api2 = {
+    id: 3,
+    email: "malsoo@gmail.com",
+    desc: "gsfsfysrtysfgsgs"
+};
+console.log(api2);
+let laptop = {
+    name: "NLI market",
+    productArr: ["laptop", "mobile"],
+    price: [3, 4, 5]
+};
+console.log(laptop);
+let traficWorker = ["Aslam", "Ali", "Khan"];
+console.log(traficWorker);
+console.log(traficWorker.length);
+let work = {
+    first: "Ali",
+    second: "Ahmed",
+};
+console.log(work);
 export {};
 //# sourceMappingURL=app.js.map

@@ -47,3 +47,40 @@ let api2: Data = {
     desc: "gsfsfysrtysfgsgs"
 }
 console.log(api2)
+
+
+/// using interface with arrays
+
+interface Product {
+    name: string,
+    productArr : string[],
+    price: number[]
+}
+
+let laptop: Product = {
+    name: "NLI market" ,
+    productArr : ["laptop" , "mobile"],
+    price : [3 , 4 , 5]
+}
+
+console.log(laptop)
+
+
+interface workers {
+    [index : number] : string ,
+    length: number
+}
+
+let traficWorker: workers = ["Aslam" , "Ali" , "Khan"] 
+console.log(traficWorker)
+console.log(traficWorker.length)
+
+
+interface Dec {
+    [index : string] : string ,
+}
+let work : Dec = {
+    first: "Ali",
+    second: "Ahmed",
+}
+console.log(work)
