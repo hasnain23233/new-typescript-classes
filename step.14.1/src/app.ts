@@ -69,3 +69,32 @@ let StaticClock: ClockStatic = ClassClock
 let newClock = new StaticClock(7, 30, new Date())
 
 console.log(newClock.currentData)
+
+
+
+/// interface extending 
+
+
+interface student {
+    name : string , 
+    email: string
+}
+
+interface fullDetail extends student {
+    f_Name : string
+}
+
+class StudentDetailsClass implements fullDetail {
+    name: string
+    email: string
+    f_Name: string
+
+    constructor (name: string , email: string , f_name : string){
+        this.name = name
+        this.email = email
+        this.f_Name = f_name
+    }
+}
+
+let student2 = new StudentDetailsClass("Aslam" , 'aslam@gmail.com' , "Khan")
+console.log(student2)
