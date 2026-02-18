@@ -42,3 +42,30 @@ class Clock implements ClockInterface {
 let DateTime: Date = new Date
 let ClockData = new Clock(DateTime )
 console.log(ClockData)
+
+
+/// In here we learn about the classes static vs instance types
+
+interface ClockStatic {
+    new(h: number, m: number, y: Date): ClassClock
+}
+
+interface MyClockInterface {
+    currentData: Date
+}
+
+class ClassClock implements MyClockInterface {
+    currentData: Date
+
+    constructor(d: number, m: number, y: Date) {
+        this.currentData = y
+    }
+}
+
+// Static side type
+let StaticClock: ClockStatic = ClassClock
+
+// Correct instance creation
+let newClock = new StaticClock(7, 30, new Date())
+
+console.log(newClock.currentData)
