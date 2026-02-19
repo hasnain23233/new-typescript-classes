@@ -24,3 +24,22 @@ let c = getCounter()
 console.log(c(19))
 c.reset()
 c.intervel = 29
+
+
+/// Here we learn about class as a interface
+
+class point {
+    x : number 
+    y : number
+    constructor (x : number , y : number){
+        this.x = x
+        this.y = y
+    }
+}
+
+interface point2 extends point {
+    r : number
+}
+
+let student : point2 = {x:23 , y:43 , r:5}
+console.log(student)
