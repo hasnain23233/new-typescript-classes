@@ -1,6 +1,7 @@
 console.log("In this class we learn class decorators")
 
 function AddVersion(constructor: Function) {
+    console.log(constructor.name)
     constructor.prototype.version = "3.4.4"
     constructor.prototype.model = 'Hp'
 }

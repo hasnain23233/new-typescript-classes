@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 console.log("In this class we learn class decorators");
 function AddVersion(constructor) {
+    console.log(constructor.name);
     constructor.prototype.version = "3.4.4";
     constructor.prototype.model = 'Hp';
 }
