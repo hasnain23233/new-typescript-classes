@@ -19,5 +19,22 @@ App = __decorate([
 let user = new App();
 console.log(user.version);
 console.log(user.model);
+///Class Decorator with Arguments
+function loggerFunction(data) {
+    return function (constructor) {
+        console.log(data + " - class created by " + constructor.name);
+    };
+}
+let admin = class admin {
+    name;
+    constructor(name) {
+        this.name = name;
+    }
+};
+admin = __decorate([
+    loggerFunction("INFO")
+], admin);
+let information = new admin("Hasnain");
+console.log(information.name);
 export {};
 //# sourceMappingURL=app.js.map

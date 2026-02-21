@@ -19,3 +19,18 @@ class App {
 let user = new App()
 console.log(user.version)
 console.log(user.model)
+
+///Class Decorator with Arguments
+
+function loggerFunction(data: string){
+    return function (constructor : Function){
+        console.log(data + " - class created by " + constructor.name)
+    }
+}
+@loggerFunction("INFO")
+class admin {
+    constructor(public name: string){}
+}
+
+let information = new admin("Hasnain")
+console.log(information.name)
